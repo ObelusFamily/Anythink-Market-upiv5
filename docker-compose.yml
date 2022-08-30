@@ -28,13 +28,13 @@ services:
     command: sh -c "cd frontend && yarn install && yarn start"
     environment:
       - NODE_ENV=development
-      - PORT=3002
+      - PORT=3001
     working_dir: /usr/src
     volumes:
       - ./:/usr/src/
       - /usr/src/frontend/node_modules
     ports:
-      - "3002:3002"
+      - "3001:3001"
   postgres-python:
     container_name: postgres-python
     restart: on-failure
